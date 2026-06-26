@@ -24,3 +24,61 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.invoice-control-input {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid #27272a;
+  background: #18181b;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: white;
+  outline: none;
+}
+
+.invoice-control-input:focus {
+  border-color: #10b981;
+}
+
+@media print {
+  html,
+  body {
+    background: white !important;
+  }
+
+  .invoice-app-shell {
+    min-height: auto !important;
+    background: white !important;
+    color: #0f172a !important;
+  }
+
+  .invoice-app-nav,
+  .invoice-app-intro,
+  .invoice-editor,
+  .site-header,
+  .site-footer {
+    display: none !important;
+  }
+
+  .invoice-document-wrap {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .invoice-main-grid {
+    display: block !important;
+  }
+
+  .invoice-document {
+    width: 100% !important;
+    min-height: auto !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  @page {
+    margin: 0.45in;
+  }
+}
